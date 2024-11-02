@@ -26,7 +26,7 @@ func main() {
 	pb.RegisterCategoryServiceServer(grpcServer, categoryService)
 	reflection.Register(grpcServer) // Permitir usarmos um client como o Evans.
 	// Agora, precisamos abrir uma conexão TCP para "falar" com o gRPC:
-	lis, err := net.Listen("tcp", ":50050")
+	lis, err := net.Listen("tcp", ":50051")
 	if err != nil {
 		panic(err)
 	}
